@@ -2,14 +2,18 @@
 <html>
   <head>
     <title>pwds</title>
-    <script src="pwds.js"></script>
   </head>
   <body>
     <center>
       <h1>pwds</h1>
-      <input type="text" id="pattern">
-      <button type="button" onclick="generate()">Generate</button>
-      <ul id="passwords"></ul>
+      Length:&nbsp;<span id="pattern-length">0</span>&nbsp;&nbsp;
+      <input type="text" id="pattern" oninput="onPatternChange()" autofocus>
+      <button type="button" onclick="generatePattern()">New Pattern</button>
+      <ul id="passwords">
+        <li id="li-test" style="visibility: hidden"></li>
+      </ul>
     </center>
+    <script src="scroll.js"></script>
+    <script src="pwds.js"></script>
   </body>
 </html>
