@@ -1,0 +1,63 @@
+.form-inline .form-group {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.navbar-form .input-group,
+.form-inline .input-group {
+  display: inline-table;
+  vertical-align: middle;
+}
+.navbar-form .input-group .form-control,
+.navbar-form .input-group .input-group-addon,
+.navbar-form .input-group .input-group-btn {
+  width: auto;
+}
+.form-inline .input-group .form-control,
+.form-inline .input-group .input-group-addon,
+.form-inline .input-group .input-group-btn {
+  width: auto;
+}
+
+.navbar {
+  text-align: center;
+  margin-bottom: 0;
+}
+.navbar-header {
+  float: left;
+  margin: 0;
+}
+.navbar-form {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top: 0;
+  border-bottom: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.navbar-form .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+.navbar-form.pattern-form {
+  clear: both;
+}
+.navbar-form.pattern-form .input-group .form-control {
+  width: 200px;
+}
+@media (min-width: 468px) {
+  .navbar-form.pattern-form {
+    clear: none;
+  }
+}
+
+#passwords {
+  padding-left: 0;
+}
+#passwords li {
+  font-family: Menlo, Monaco, Consolas, monospace;
+  font-size: 26px;
+  padding: 4px 0;
+}

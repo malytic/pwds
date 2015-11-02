@@ -2,13 +2,37 @@
 <html>
   <head>
     <title>pwds</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="pwds.css">
   </head>
   <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="">pwds</a>
+        </div>
+        <div id="navbar">
+          <form class="navbar-form pull-right">
+            <button type="button" class="btn btn-default"
+                    title="Get help with pattern formatting">Help</button>
+          </form>
+          <form class="navbar-form pattern-form">
+            <div class="input-group">
+              <span class="input-group-addon" id="pattern-length"
+                    title="Password length">0</span>
+              <input type="text" class="form-control" id="pattern"
+                     oninput="onPatternChange()" autofocus>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-primary" title="Generate a new pattern"
+                        onclick="generatePattern()">New</button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
     <center>
-      <h1>pwds</h1>
-      Length:&nbsp;<span id="pattern-length">0</span>&nbsp;&nbsp;
-      <input type="text" id="pattern" oninput="onPatternChange()" autofocus>
-      <button type="button" onclick="generatePattern()">New Pattern</button>
       <ul id="passwords">
         <li id="li-test" style="visibility: hidden"></li>
       </ul>

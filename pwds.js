@@ -68,13 +68,13 @@ var fillViewport = function() {
   var emptySpace = viewport - docHeight;
   var passwordHeight = document.getElementById('li-test').scrollHeight;
   var possiblePasswords = Math.ceil(emptySpace / passwordHeight);
-  appendPasswords(possiblePasswords + 5);
+  appendPasswords(possiblePasswords + 2);
 };
 
 var scrollOptions = {
   distance: 200,
   callback: function(done) {
-    appendPasswords(10);
+    appendPasswords(4);
     done();
   }
 };
