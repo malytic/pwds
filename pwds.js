@@ -19,12 +19,6 @@ var patternLength = document.getElementById('pattern-length');
 var passwordList = document.getElementById('passwords');
 var passwordHeight = document.getElementById('li-test').scrollHeight;
 
-var onPatternChange = function() {
-  var sanitizedPattern = patternInput.value.replace(keyRegex, '');
-  patternInput.value = sanitizedPattern;
-  patternLength.innerHTML = sanitizedPattern.length;
-};
-
 var generatePattern = function() {
   var i;
   var possible = ['cv', 'CV', '99'];
@@ -34,13 +28,21 @@ var generatePattern = function() {
     pattern.push(possible[Math.floor(Math.random() * possible.length)]);
   }
   patternInput.value = pattern.join('');
-  onPatternChange();
+  patternLength.innerHTML = patternInput.value.length;
+};
+
+var sanitizePattern = function() {
+  var sanitizedPattern = patternInput.value.replace(keyRegex, '');
+  patternInput.value = sanitizedPattern;
+  patternLength.innerHTML = sanitizedPattern.length;
+  return sanitizedPattern;
 };
 
 var appendPasswords = function(number) {
-  if (!patternInput.value.length) return;
+  var pattern = sanitizePattern();
+  if (!pattern.length) return;
 
-  generatePasswords(patternInput.value, number).forEach(function(password) {
+  generatePasswords(pattern, number).forEach(function(password) {
     var li = document.createElement('li');
     li.appendChild(document.createTextNode(password));
     passwordList.appendChild(li);
