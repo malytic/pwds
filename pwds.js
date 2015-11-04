@@ -17,6 +17,7 @@ var keyRegex = new RegExp('[^' + charKeys + ']', 'g');
 var patternInput = document.getElementById('pattern');
 var patternLength = document.getElementById('pattern-length');
 var passwordList = document.getElementById('passwords');
+var passwordHeight = document.getElementById('li-test').scrollHeight;
 
 var onPatternChange = function() {
   var sanitizedPattern = patternInput.value.replace(keyRegex, '');
@@ -66,15 +67,20 @@ var fillViewport = function() {
   var docHeight = document.documentElement.offsetHeight;
   if (viewport < docHeight) return;
   var emptySpace = viewport - docHeight;
-  var passwordHeight = document.getElementById('li-test').scrollHeight;
   var possiblePasswords = Math.ceil(emptySpace / passwordHeight);
-  appendPasswords(possiblePasswords + 2);
+  appendPasswords(possiblePasswords + 1);
+};
+
+var appendOnePage = function() {
+  var viewport = document.documentElement.clientHeight;
+  appendPasswords(Math.ceil(viewport / passwordHeight));
+  window.scrollTo(0, document.body.scrollHeight);
 };
 
 var scrollOptions = {
   distance: 200,
   callback: function(done) {
-    appendPasswords(4);
+    appendPasswords(Math.ceil(this.distance / passwordHeight));
     done();
   }
 };

@@ -28,7 +28,7 @@
                       title="Get help with pattern formatting" onclick="help()" disabled>Help</button>
             </span>
           </form>
-          <form class="navbar-form pattern-form">
+          <form class="navbar-form pattern-form" action="javascript:appendOnePage()">
             <div class="input-group">
               <span class="input-group-addon" title="Password length">
                 <span class="badge" id="pattern-length">0</span>
@@ -36,8 +36,8 @@
               <input type="text" class="form-control input-lg" id="pattern"
                      oninput="onPatternChange()" title="Password pattern" autofocus>
               <span class="input-group-btn">
-                <button type="button" class="btn btn-primary btn-lg"
-                        title="Generate new passwords" onclick="scroll()" disabled>Go!</button>
+                <button type="submit" class="btn btn-primary btn-lg"
+                        title="Generate new passwords">Go!</button>
               </span>
             </div>
           </form>
