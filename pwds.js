@@ -63,7 +63,7 @@ var generatePasswords = function(pattern, number) {
 
 var fillViewport = function() {
   var viewport = document.documentElement.clientHeight;
-  var docHeight = document.documentElement.scrollHeight;
+  var docHeight = document.documentElement.offsetHeight;
   if (viewport < docHeight) return;
   var emptySpace = viewport - docHeight;
   var passwordHeight = document.getElementById('li-test').scrollHeight;
