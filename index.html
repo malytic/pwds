@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>pwds</title>
+    <title>PWDS - Infinite Passwords!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="pwds.css">
@@ -10,22 +10,30 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="">pwds</a>
+          <a class="navbar-brand short" href="">PWDS</a>
+          <a class="navbar-brand long" href="">Infinite Passwords!</a>
         </div>
         <div id="navbar">
-          <form class="navbar-form pull-right">
-            <button type="button" class="btn btn-default"
-                    title="Get help with pattern formatting">Help</button>
+          <form class="navbar-form link-form">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-lg"
+                      title="Generate a new pattern" onclick="generatePattern()">New Pattern</button>
+            </span>
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-lg"
+                      title="Get help with pattern formatting" onclick="help()" disabled>Help</button>
+            </span>
           </form>
           <form class="navbar-form pattern-form">
             <div class="input-group">
-              <span class="input-group-addon" id="pattern-length"
-                    title="Password length">0</span>
-              <input type="text" class="form-control" id="pattern"
-                     oninput="onPatternChange()" autofocus>
+              <span class="input-group-addon" title="Password length">
+                <span class="badge" id="pattern-length">0</span>
+              </span>
+              <input type="text" class="form-control input-lg" id="pattern"
+                     oninput="onPatternChange()" title="Password pattern" autofocus>
               <span class="input-group-btn">
-                <button type="button" class="btn btn-primary" title="Generate a new pattern"
-                        onclick="generatePattern()">New</button>
+                <button type="button" class="btn btn-primary btn-lg"
+                        title="Generate new passwords" onclick="scroll()" disabled>Go!</button>
               </span>
             </div>
           </form>
@@ -33,8 +41,8 @@
       </div>
     </nav>
     <center>
-      <ul id="passwords">
-        <li id="li-test" style="visibility: hidden"></li>
+      <ul id="passwords" class="list-unstyled">
+        <li id="li-test" style="visibility: hidden">&nbsp;</li>
       </ul>
     </center>
     <script src="scroll.js"></script>
