@@ -19,6 +19,21 @@ var patternLength = document.getElementById('pattern-length');
 var passwordList = document.getElementById('passwords');
 var passwordHeight = document.getElementById('li-test').scrollHeight;
 
+var help = function() {
+  alert('Pattern Character Legend\n\n' +
+        '9    Digits\n' +
+        'v    lowercase vowels\n' +
+        'V    Uppercase vowels\n' +
+        'c    lowercase consonants\n' +
+        'C    Uppercase consonants\n' +
+        'l    lowercase letters\n' +
+        'U    Uppercase letters\n' +
+        'a    lowercase alphanumerics\n' +
+        'A    Uppercase alphanumerics\n' +
+        '#    Special characters\n' +
+        '*    Any character\n');
+};
+
 var generatePattern = function() {
   var i;
   var possible = ['cv', 'CV', '99'];
