@@ -94,6 +94,11 @@ var appendOnePage = function() {
   window.scrollTo(0, document.body.scrollHeight);
 };
 
+var newPattern = function() {
+  generatePattern();
+  appendOnePage();
+};
+
 var scrollOptions = {
   distance: 200,
   callback: function(done) {
