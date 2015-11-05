@@ -1,3 +1,9 @@
+/**
+ * CREDITS
+ * https://github.com/alexblack/infinite-scroll
+ * https://github.com/rusintez/infinite-scroll
+ */
+
 var isIE = /msie/gi.test(navigator.userAgent);
 
 function getScrollPos() {
