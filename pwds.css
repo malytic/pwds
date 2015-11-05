@@ -1,18 +1,19 @@
 input {
   text-align: center;
 }
-
+#passwords {
+  margin-top: 114px;
+}
 #passwords li {
   font-family: Menlo, Monaco, Consolas, monospace;
   font-size: 26px;
   padding: 4px 0;
+  height: 45px;
 }
-
 .btn-lg, .btn-group-lg>.btn {
   height: 52px;
   padding: 12px;
 }
-
 .navbar {
   text-align: center;
   margin-bottom: 0;
@@ -102,6 +103,9 @@ input {
 }
 
 @media (min-width: 992px) {
+  #passwords {
+    margin-top: 62px;
+  }
   .navbar>.container .navbar-brand,
   .navbar>.container-fluid .navbar-brand {
     margin-left: -15px;

@@ -17,7 +17,7 @@ var keyRegex = new RegExp('[^' + charKeys + ']', 'g');
 var patternInput = document.getElementById('pattern');
 var patternLength = document.getElementById('pattern-length');
 var passwordList = document.getElementById('passwords');
-var passwordHeight = document.getElementById('li-test').scrollHeight;
+var passwordHeight = 45;
 
 var help = function() {
   alert('Pattern Character Legend\n\n' +
