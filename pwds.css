@@ -72,12 +72,12 @@ input {
 .navbar-form.pattern-form button {
   width: 66px;
 }
-.navbar-form.pattern-form input {
+.navbar-form.pattern-form .input-group .form-control {
+  font-family: Menlo, Monaco, Consolas, monospace;
+  font-size: 26px;
+  width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-}
-.navbar-form.pattern-form .input-group .form-control {
-  width: 100%;
 }
 .navbar-form.pattern-form .input-group .input-group-btn {
   width: 1%;
