@@ -75,6 +75,7 @@ input {
 .navbar-form.pattern-form .input-group .form-control {
   font-family: Menlo, Monaco, Consolas, monospace;
   font-size: 26px;
+  color: #df691a;
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
